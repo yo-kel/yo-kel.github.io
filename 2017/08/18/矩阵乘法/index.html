@@ -216,10 +216,10 @@ MathJax.Hub.Queue(function() {
         <div class="col-md-8 col-md-offset-2">
       		<h1 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h1><p>之前学过了，但是但是但是呵呵呵。。。。<br><br>果然没有写感悟就很容易忘吗？</p>
 <p>不过看看菜鸡博客貌似也差不多了。<br><br><a href="http://blog.csdn.net/ccf15068475758/article/details/52846726" target="_blank" rel="external">菜鸡博客</a><br><br>这样写貌似就完事了。。</p>
-<p>不行再来扯两句。<br><br>度娘先挂上<img src="https://imgsa.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=55c0b9818b025aafc73f76999a84c001/359b033b5bb5c9ea911dfca2dc39b6003bf3b381.jpg" alt=""><br>用比较通俗的话说明求c(i,j)，就是a矩阵的第i行和b矩阵的第j列逐个乘后再加起来。由于矩阵满足交换律与结合律，这样就可以解决，只有递推关系，而且都是加的关系，就像斐波那契数列一样。<br><br>就让我们来谈谈怎么用矩阵乘法求斐波那契数列的某项吧<del>你这是在撑字数吗-_-</del></p>
-<p>$ \begin{bmatrix}  f(n+2) \\f(n+1) \end{bmatrix} $=<br>$ \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} $<br>$ \begin{bmatrix}  f(n+1) \\f(n) \end{bmatrix} $</p>
+<p>不行再来扯两句。<br><br>度娘先挂上<img src="/image/matrix.jpg" alt=""><br>用比较通俗的话说明求c(i,j)，就是a矩阵的第i行和b矩阵的第j列逐个乘后再加起来。由于矩阵满足交换律与结合律，这样就可以解决，只有递推关系，而且都是加的关系，就像斐波那契数列一样。<br><br>就让我们来谈谈怎么用矩阵乘法求斐波那契数列的某项吧<del>你这是在撑字数吗-_-</del></p>
+<p>$ \begin{bmatrix}  f(n+2) \\f(n+1) \end{bmatrix} $= $ \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} $ $ \begin{bmatrix}  f(n+1) \\f(n) \end{bmatrix} $</p>
 <p>好了，我们谈完了。<del>你在逗我!!!</del><br><br>其实就是前人已经成功地构造出来了，就像欧几里得算法一样记住怎么用就行了。<br><br>再提一句，矩阵（只有数字的那个）第一行控制了$f(n+2)$与$f(n+1)$,$f(n)$的关系，也就是我们可以求的其实是满足$f(n+2)=af(n+1)+bf(n)$ <br></p>
-<p>再推一下涉及三项的。<br><br>$ \begin{bmatrix}  f(n+3) \\f(n+2)\\f(n+1) \end{bmatrix} $=<br>$ \begin{bmatrix} a &amp; b &amp; c \\ 1 &amp; 0 &amp; 0\\0 &amp;1 &amp;0 \end{bmatrix} $<br>$ \begin{bmatrix}  f(n+2) \\f(n+1)\\f(n) \end{bmatrix} $ <br><br>递推式$f(n+3)=af(n+2)+bf(n+1)+cf(n)$ <br><br>你已经找到规律了不是吗。</p>
+<p>再推一下涉及三项的。<br><br>$ \begin{bmatrix}  f(n+3) \\f(n+2)\\f(n+1) \end{bmatrix} $= $ \begin{bmatrix} a &amp; b &amp; c \\ 1 &amp; 0 &amp; 0\\0 &amp;1 &amp;0 \end{bmatrix} $ $ \begin{bmatrix}  f(n+2) \\f(n+1)\\f(n) \end{bmatrix} $ <br><br>递推式$f(n+3)=af(n+2)+bf(n+1)+cf(n)$ <br><br>你已经找到规律了不是吗。</p>
 <p>再提一句，矩阵乘法主要是用于求类似上面递推式的某一项</p>
 
             <div class="clearfix"></div>
