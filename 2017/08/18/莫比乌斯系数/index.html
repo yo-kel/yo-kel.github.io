@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+<!--Mathjax-->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+}); 
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<head>
+  <title>莫比乌斯系数 | yokel</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="yokel">
+    <meta name="author" content="yokel">
+    <meta name="description" content="yokel" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="yokel" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/github.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/hexo/" class="animsition-link">hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/noip离线赛/" class="animsition-link">noip离线赛<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/经验/" class="animsition-link">经验<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                    <li><a href="http://www.werelone.cn/" class="animsition-link">WERELONE</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/xx.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">yokel</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-08-18T00:19:25.356Z" itemprop="datePublished">
+          2017-08-18
+      </time>
+    
+</span>
+                <h1>莫比乌斯系数</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="莫比乌斯系数"><a href="#莫比乌斯系数" class="headerlink" title="莫比乌斯系数"></a>莫比乌斯系数</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>莫比乌斯反演应该是简单一点，实用性也更强<del>，Spylft学完后，除了模板题还没遇到过</del>。</p>
+<p>和容斥的思想比较接近，主要用于求解$gcd$一类的问题。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>例，求对于给定的$V[ \ ]$，满足$gcd(V[a],V[b])=1$的有多少对。</p>
+<p>加上包含因子$1$的数，减去包含因子$2$的数，减去包含因子$3$的数，跳过包含因子$4$的数(已经被因子$2$包含)，减去包含因子$5$的数，加上包含因子$6$的数(被因子$2$和因子$3$减了两次)…..最终所得即为对数。</p>
+<p>综上，具体步骤。令$mul[ \ ]$为莫比乌斯系数。</p>
+<ul>
+<li>含有奇数种质因子的$x$,$mul[x]=-1$ <br></li>
+<li>含有偶数种质因子的$x$,$mul[x]=1$ <br></li>
+<li>含有两个及以上同种质因子的$x$,$mul[x]=0$<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">MUL</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;M;i++)mul[i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;M;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(mark[i])<span class="keyword">continue</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&lt;M;k+=i)&#123;</div><div class="line">			<span class="keyword">if</span>(!mul[k])<span class="keyword">continue</span>;</div><div class="line">			<span class="keyword">if</span>(k%(<span class="number">1l</span>l*i*i)==<span class="number">0</span>)mul[k]=<span class="number">0</span>;</div><div class="line">			<span class="keyword">else</span> mul[k]*=<span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;M;i++)&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&lt;M;k+=i)add(i,k);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h1 id="GCD-is-power"><a href="#GCD-is-power" class="headerlink" title="GCD is power"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6102" target="_blank" rel="external">GCD is power</a></h1><p>有一个长度为$N$的排列，$m$次询问区间$[L,R]$，求出：$\sum\limits_{i=L}^R\sum\limits_{j=i+1}^R\sum\limits_{k=j+1}^R [gcd(P[i], P[j]) = P[k]] \times P[k]$。</p>
+<p>先考虑只有一次询问，显然，$k是$是必须枚举的，现在考虑的就是$[L,k]$中$gcd(P[i],P[j])=P[k]$的对数。<br><br>显然，$P[i]$,$P[j]$都必须含有因子$P[k]$,如果将所有含有因子$P[k]$的除以$P[k]$，那么问题就转化成了求$gcd(P[i],P[j])=1$的对数乘以$P[k]$。</p>
+<p>这就和上面类似了，排列能更方便地处理。枚举因子(这里其实是从大向小枚举的)，加上个数乘上莫比乌斯系数即可。</p>
+<p>多次询问，按照右端点小排序，从左往右加入点$x$并更新,并回答该点询问。用树状数组维护每个点为左端点，到点$x$对答案的贡献。</p>
+<p>加入点$x$并更新，其实与上面类似，此时不再只有左端点，而是整个区间的点。其实一样  -_-,看下面代码很容易理解。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctype.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 100005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> n,m,v[M],mul[M],pos[M],p[M];</div><div class="line">LL ans[M];</div><div class="line"><span class="keyword">bool</span> mark[M];</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;e[M];</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">VEC</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> head[M],cnt=<span class="number">0</span>;</div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></div><div class="line">        <span class="keyword">int</span> xx,nxt;</div><div class="line">    &#125;e[<span class="number">1166755</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;</div><div class="line">        cnt=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)head[i]=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">        e[++cnt]=(node)&#123;b,head[a]&#125;;</div><div class="line">        head[a]=cnt;</div><div class="line">    &#125;</div><div class="line">&#125;vec;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> l,r,id;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> node &amp;p)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">return</span> r&lt;p.r;</div><div class="line">    &#125;</div><div class="line">&#125;Q[M];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Rd</span><span class="params">(<span class="keyword">int</span> &amp;res)</span></span>&#123;</div><div class="line">    <span class="keyword">char</span> c;</div><div class="line">    res=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(c=getchar(),!<span class="built_in">isdigit</span>(c));</div><div class="line">    <span class="keyword">do</span>&#123;</div><div class="line">        res=(res&lt;&lt;<span class="number">1</span>)+(res&lt;&lt;<span class="number">3</span>)+(c^<span class="string">'0'</span>);</div><div class="line">    &#125;<span class="keyword">while</span>(c=getchar(),<span class="built_in">isdigit</span>(c));</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BIT</span>&#123;</span></div><div class="line">    LL a[M];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span>(a));</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,LL v)</span></span>&#123;</div><div class="line">        <span class="keyword">while</span>(x&lt;=n)&#123;</div><div class="line">            a[x]+=v;</div><div class="line">            x+=x&amp;-x;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="function">LL <span class="title">que</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">        LL re=<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(x)&#123;</div><div class="line">            re+=a[x];</div><div class="line">            x-=x&amp;-x;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> re;</div><div class="line">    &#125;</div><div class="line">    <span class="function">LL <span class="title">query</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">        LL re=que(r);</div><div class="line">        <span class="keyword">if</span>(l)re-=que(l<span class="number">-1</span>);</div><div class="line">        <span class="keyword">return</span> re;</div><div class="line">    &#125;</div><div class="line">&#125;bit;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">MUL</span><span class="params">()</span></span>&#123;</div><div class="line">    mul[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;M;++i) mul[i]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;M;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(mark[i])<span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&lt;M;k+=i)&#123;</div><div class="line">            mark[k]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span>(!mul[k])<span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span>(k%(<span class="number">1l</span>l*i*i)==<span class="number">0</span>)mul[k]=<span class="number">0</span>;</div><div class="line">            <span class="keyword">else</span> mul[k]*=<span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=v[x];i&lt;=n;i+=v[x])&#123;</div><div class="line">        <span class="keyword">if</span>(!mul[i/v[x]])<span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> sz=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=vec.head[i];k;k=vec.e[k].nxt)&#123;</div><div class="line">            <span class="keyword">int</span> pp=pos[vec.e[k].xx];</div><div class="line">            <span class="keyword">if</span>(pp&gt;=x)<span class="keyword">continue</span>;</div><div class="line">            p[++sz]=pp;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(sz)sort(p+<span class="number">1</span>,p+<span class="number">1</span>+sz);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=sz;k&gt;=<span class="number">1</span>;k--)bit.add(p[k],<span class="number">1l</span>l*mul[i/v[x]]*(sz-k)*v[x]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> j=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">        insert(i);</div><div class="line">        <span class="keyword">for</span>(;j&lt;=m&amp;&amp;Q[j].r==i;j++)ans[Q[j].id]=bit.query(Q[j].l,Q[j].r);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans[i]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> T,i,k,j;</div><div class="line">    Rd(T);</div><div class="line">    MUL();</div><div class="line">    <span class="keyword">while</span>(T--)&#123;</div><div class="line">        Rd(n),Rd(m);</div><div class="line">        vec.clear();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&lt;=n;k+=i)vec.add(i,k);</div><div class="line">        &#125;</div><div class="line">        bit.init();</div><div class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)Rd(v[i]),pos[v[i]]=i;</div><div class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)Rd(Q[i].l),Rd(Q[i].r),Q[i].id=i;</div><div class="line">        sort(Q+<span class="number">1</span>,Q+<span class="number">1</span>+m);</div><div class="line">        solve();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/08/16/2017.8.14离线赛题解/">
+        2017.8.14离线赛题解 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By yokel. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26427669&auto=1&height=66"></iframe>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
