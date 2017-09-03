@@ -238,106 +238,10 @@ MathJax.Hub.Queue(function() {
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/28/2017.8.28离线赛题解/">2017.8.28离线赛题解</a></h3>
+                    <h3><a href="/2017/08/18/莫比乌斯系数/">莫比乌斯系数</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2017-08-28T08:29:45.713Z" itemprop="datePublished">
-          2017-08-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        一个晚上三道$dp$，我觉得可能需要脑洞治疗仪了，脑细胞不太够用。。
-猴子上树等价转换为有$n$只猴子，将其分成$m$个区间，求最小的能量。
-p30暴力的$O(n^3)dp$,定义$dp[i][k]$，到第$k$只猴子，已经划分了$i$个区间的最小能量。12345678910111213141516171819202122232425struct P30&#123;    static const int M30=505;    LL 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/28/2017.8.28离线赛题解/">阅读全文...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/08/27/2017.8.27离线赛题解/">2017.8.27离线赛题解</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-27T08:23:05.842Z" itemprop="datePublished">
-          2017-08-27
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        自动刷题机二分的思路非常显然，但是由于二分的时候$check$判断的是$&lt;=K$，也就是说答案也有可能比$K$小，所以最后还要判断$AC$题数是否为$K$。12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455#include&lt;stdio.h&gt;#include&lt;ios
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/27/2017.8.27离线赛题解/">阅读全文...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/08/19/2017.8.19离线赛题解/">2017.8.19离线赛题解</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-19T12:06:30.152Z" itemprop="datePublished">
-          2017-08-19
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        LOVE看不懂。。第一题为什么要放这么简单
-dp的定义和转移太显然了。
-主要的坑点还是在高精上，题目太简单反而很多人忽视了高精。我是写第二题的时候，回来发现$90$分提示不超过$long long$才意识。
-比赛有$4$个人没有写高精，应该都是大意了，跑去第二三题。
-太简单也不一定简单，考的就是细心。哪怕只是手造数据也还是能排查掉很多问题(见代码处)。1234567891011121314151617181920212223242526
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/19/2017.8.19离线赛题解/">阅读全文...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/08/18/noip 数学/">noip 数学</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-18T13:31:19.550Z" itemprop="datePublished">
+      <time datetime="2017-08-18T00:19:25.356Z" itemprop="datePublished">
           2017-08-18
       </time>
     
@@ -347,15 +251,15 @@ dp的定义和转移太显然了。
                 <div class="col-md-8">
                     <p>
                       
-                        noip 数学以下问题和方法主要来自雅里中学大神的ppt，个人在这里写一下理解和感悟
-运算技巧整除问题：
-输入$n(n&lt;=10^9)$,求出$\sum_{i=1}^{n}{[\frac{n}{i}]}$。
-因为将每项i得到的商列出来，肯定是一段$1$，一段$2$，一段$3$….其中存在了大量的重复数字，事实上，数字的结果最多只有$\sqrt{n}$中。所以我们尝试用数字结果去求除数范围，这样就能将相同的数字结果一起处理。大神的递推
+                        莫比乌斯系数简介莫比乌斯反演应该是简单一点，实用性也更强，Spylft学完后，除了模板题还没遇到过。
+和容斥的思想比较接近，主要用于求解$gcd$一类的问题。
+实现方法例，求对于给定的$V[ \ ]$，满足$gcd(V[a],V[b])=1$的有多少对。
+加上包含因子$1$的数，减去包含因子$2$的数，减去包含因子$3$的数，跳过包含因子$4$的数(已经被因子$2$包含)，减去包含因子$5$的数，加上包含因子$6$的数(被因子$2$和因
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/08/18/noip 数学/">阅读全文...</a>
+                        <a href="/2017/08/18/莫比乌斯系数/">阅读全文...</a>
                     </p>
                     
                 </div>
@@ -367,11 +271,11 @@ dp的定义和转移太显然了。
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/18/矩阵乘法/">矩阵乘法</a></h3>
+                    <h3><a href="/2017/08/16/2017.8.14离线赛题解/">2017.8.14离线赛题解</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2017-08-18T13:31:11.301Z" itemprop="datePublished">
-          2017-08-18
+      <time datetime="2017-08-16T12:58:26.612Z" itemprop="datePublished">
+          2017-08-16
       </time>
     
 </span>
@@ -380,15 +284,111 @@ dp的定义和转移太显然了。
                 <div class="col-md-8">
                     <p>
                       
-                        矩阵乘法之前学过了，但是但是但是呵呵呵。。。。果然没有写感悟就很容易忘吗？
-不过看看菜鸡博客貌似也差不多了。菜鸡博客这样写貌似就完事了。。
-不行再来扯两句。度娘先挂上用比较通俗的话说明求c(i,j)，就是a矩阵的第i行和b矩阵的第j列逐个乘后再加起来。由于矩阵满足交换律与结合律，这样就可以解决，只有递推关系，而且都是加的关系，就像斐波那契数列一样。就让我们来谈谈怎么用矩阵乘法求斐波那契数列的某项吧你这是在撑字数吗-_-
-$ \begin
+                        很显然，这是一场水分大赛，花式水分才是王道。
+完全图计数对于只有40这种数据小规模数据，目前状压(40高了点)和折半枚举的复杂度比较符合。
+70分只要用bitset或者long long压位，枚举是否选取当前点即可。
+正解是折半枚举，完全没有往这方面想，主要$n=40$的复杂度并不知道是多少，折半枚举题目做得太少。枚举出前一半的状态，计算后一半的状态。因为边是双向边，所以前一半的状态能到达后一半，后一半也能到达前一半。所以用高位前缀和算
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/08/18/矩阵乘法/">阅读全文...</a>
+                        <a href="/2017/08/16/2017.8.14离线赛题解/">阅读全文...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/13/算法模板/">算法模板</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-13T02:21:49.671Z" itemprop="datePublished">
+          2017-08-13
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        算法模板临近复赛，整理顺便复习一下之前学过的模板。。
+一.读入和输出1.文件读入输出12freopen("文件名.in","r",stdin);freopen("文件名.out","w",stdout);
+使用freopen函数要头文件stdio.h，但没有不会在dev中报ce2.读入输出挂要加头文件ctype.h。
+读入1234567891011void Rd(int &amp;res)&#123;	char c;	int k=1;	
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/13/算法模板/">阅读全文...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/10/2017.8.7离线赛题解/">2017.8.7离线赛题解</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-10T08:20:39.962Z" itemprop="datePublished">
+          2017-08-10
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        总结一定程度上被出题组误导了。既然说是要报复社会，题目肯定难得变态。
+第二题浪费了大量时间，看了第三题没怎么想认为比第二题更难，so…
+时间还是要有固定的分配啊，就目前而看反正联赛应该没这么难。第一题$30-60min$ 第二题$60-90min$ 第三题$60-90min$ 具体自己调整，第二题和第三题已经不一定谁更难了，但最小时间肯定要达到，这几次爆$0$基本都是第三题基本在$30min$以下（上上场前两题很顺，留了时间还对拍了，所
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/10/2017.8.7离线赛题解/">阅读全文...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/07/hello-world/">Hello World</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-07T05:50:37.366Z" itemprop="datePublished">
+          2017-08-07
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/07/hello-world/">阅读全文...</a>
                     </p>
                     
                 </div>
@@ -398,8 +398,8 @@ $ \begin
         </div>
         
         <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/">← Newer Posts</a>
           
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
     </div>
 </section>
